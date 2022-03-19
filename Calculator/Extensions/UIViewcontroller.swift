@@ -1,8 +1,8 @@
-//
-//  UIViewcontroller.swift
-//  Calculator
-//
-//  Created by Сабитов Данил on 19.03.2022.
-//
-
 import Foundation
+import UIKit
+
+extension UIViewController {
+    func calculateAndAddCornerRadius(with width: CGFloat) -> CGFloat {
+        return width / 2
+    }
+}
