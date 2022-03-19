@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private var numbersUserWithWorks = ""
+    private var numberUserWithWorks = ""
     
     //MARK: - properties
     @IBOutlet weak var clearLabelTextButton: UIButton!
@@ -132,13 +132,13 @@ class ViewController: UIViewController {
     private func addNumbers(_ title: String?) {
         guard let title = title else { return }
         
-        numbersUserWithWorks = numbersUserWithWorks + title
+        numberUserWithWorks = numberUserWithWorks + title
         
-        resultLabel.text = numbersUserWithWorks
+        resultLabel.text = numberUserWithWorks
     }
     
     private func clearResultLabel() {
-        numbersUserWithWorks = ""
+        numberUserWithWorks = ""
         resultLabel.text = "0"
     }
 }
