@@ -146,7 +146,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="seventButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nN-Bi-KwH"/>
+                                            <action selector="sevenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcc-OR-oFu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -415,6 +415,7 @@
                         <outlet property="plusButton" destination="QhI-IN-SXz" id="WSj-aT-TlH"/>
                         <outlet property="plusOrMinusButton" destination="SJU-qk-ZC3" id="iwJ-pB-J7O"/>
                         <outlet property="procentButton" destination="mEz-dC-nHL" id="n1B-9j-c5J"/>
+                        <outlet property="resultLabel" destination="0Gh-os-cTi" id="Ej1-mR-NAV"/>
                         <outlet property="sevenButton" destination="ej8-BL-cAk" id="ITH-PB-kv4"/>
                         <outlet property="sixButton" destination="5S3-Vz-Zmb" id="tVr-KT-koz"/>
                         <outlet property="threeButton" destination="Kyb-6h-q4A" id="evO-td-ugY"/>

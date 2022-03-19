@@ -1,6 +1,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private var numbersUserWithWorks = ""
+    
     //MARK: - properties
     @IBOutlet weak var clearLabelTextButton: UIButton!
     @IBOutlet weak var plusOrMinusButton: UIButton!
@@ -21,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var zeroButton: UIButton!
     @IBOutlet weak var commaButton: UIButton!
     @IBOutlet weak var equalButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
     
     //MARK: - lifecycle
     override func viewDidLoad() {
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
     
     //MARK: - methods
     @IBAction func clearLabelTextButtonTapped(_ sender: UIButton) {
+        clearResultLabel()
     }
     
     
@@ -43,15 +47,18 @@ class ViewController: UIViewController {
     @IBAction func divisionButtonTapped(_ sender: UIButton) {
     }
     
+    
     @IBAction func sevenButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
-    
     @IBAction func eightButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     
     @IBAction func nineButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     
@@ -59,31 +66,39 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fourButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     
     @IBAction func fiveButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     @IBAction func sixButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     @IBAction func minusButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func oneButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     @IBAction func twoButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     @IBAction func threeButtonTapped(_ sender: UIButton) {
     }
     
     @IBAction func plusButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func zeroButtonTapped(_ sender: UIButton) {
+        addNumbers(sender.titleLabel?.text)
     }
     
     @IBAction func commaButtonTapped(_ sender: UIButton) {
@@ -112,5 +127,18 @@ class ViewController: UIViewController {
         zeroButton.layer.cornerRadius = calculateAndAddCornerRadius(with: zeroButton.frame.width / 2)
         commaButton.layer.cornerRadius = calculateAndAddCornerRadius(with: commaButton.frame.width)
         equalButton.layer.cornerRadius = calculateAndAddCornerRadius(with: equalButton.frame.width)
+    }
+    
+    private func addNumbers(_ title: String?) {
+        guard let title = title else { return }
+        
+        numbersUserWithWorks = numbersUserWithWorks + title
+        
+        resultLabel.text = numbersUserWithWorks
+    }
+    
+    private func clearResultLabel() {
+        numbersUserWithWorks = ""
+        resultLabel.text = "0"
     }
 }
